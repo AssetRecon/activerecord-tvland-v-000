@@ -6,4 +6,7 @@ has_many :shows, through: :characters
     "#{self.first_name} #{self.last_name}"
   end
 
+  def list_roles
+    self.characters
+  end
 end
