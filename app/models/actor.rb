@@ -7,6 +7,7 @@ has_many :shows, through: :characters
   end
 
   def list_roles
-    self.characters
-  end
+    characters.collect do |character|
+      "#{character.name} - #{character.show.name}"
+    end
 end
