@@ -11,5 +11,5 @@ has_many :shows, through: :characters
       "#{character.name} - #{character.show.name}"
     end
   end
-  
+
 end
